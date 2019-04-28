@@ -23,6 +23,7 @@ char** Method(size_t strc, char **strings) {
 	char *errFlag = NULL;
 	tempStr = (char*)calloc(1, sizeof(char));
 	if (!tempStr) {
+		printf("[error]");
 		return 0;
 	}
 
@@ -37,6 +38,7 @@ char** Method(size_t strc, char **strings) {
 				errFlag = NULL;
 				errFlag = (char*)realloc(tempStr, sizeof(char) * tStr_len);
 				if (!errFlag) {
+					printf("[error]");
 					return 0;
 				}
 				tempStr = errFlag;
@@ -50,6 +52,7 @@ char** Method(size_t strc, char **strings) {
 		errFlag = NULL;
 		errFlag = (char*)realloc(tempStr, sizeof(char) * tStr_len);
 		if (!errFlag) {
+			printf("[error]");
 			return 0;
 		}
 
@@ -60,6 +63,7 @@ char** Method(size_t strc, char **strings) {
 		errFlag = NULL;
 		errFlag = (char*)realloc(strings[i], sizeof(char) * tStr_len);
 		if (!errFlag) {
+			printf("[error]");
 			return 0;
 		}
 
@@ -69,6 +73,7 @@ char** Method(size_t strc, char **strings) {
 		errFlag = NULL;
 		errFlag = (char*)realloc(tempStr, sizeof(char));
 		if (!errFlag) {
+			printf("[error]");
 			return 0;
 		}
 		tempStr = errFlag;
